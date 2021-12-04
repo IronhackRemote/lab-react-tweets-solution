@@ -37,7 +37,13 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {
+        tweetsArray.map((tweet) => {
+          // passing a single tweet as a prop
+          return <Tweet tweet={ tweet} />
+        })
+      }
+     
     </div>
   );
 }
